@@ -1,0 +1,14 @@
+{
+    "name": "PinionCyber.NetCode",
+    "rootNamespace": "PinionCyber.NetCode",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
