@@ -1,5 +1,5 @@
 ﻿
-namespace PinionCyber.NetCode
+namespace PinionCyber.NetCode.Samples.Echo.Protocols
 {
     public static partial class ProtocolCreator
     {
