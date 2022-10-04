@@ -2,6 +2,6 @@
 {
     public interface IEchoable : Regulus.Remote.Protocolable
     {
-        Regulus.Remote.Value<string> Echo(string message);
+        Regulus.Remote.Value<string> Echo(string messa2ge);
     }
 }

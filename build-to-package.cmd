@@ -5,5 +5,5 @@ dotnet build -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Prot
 dotnet build -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Protocols\Regulus\Regulus.Remote .\Regulus.Remote\Regulus.Remote.Standalone
 
 
-dotnet publish --no-dependencies -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Protocols\Regulus\Regulus.Remote  .\Regulus.Remote\Regulus.Remote.Tools.Protocol.Sources\
+dotnet publish -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Protocols\Regulus\Regulus.Remote  .\Regulus.Remote\Regulus.Remote.Tools.Protocol.Sources\
 
