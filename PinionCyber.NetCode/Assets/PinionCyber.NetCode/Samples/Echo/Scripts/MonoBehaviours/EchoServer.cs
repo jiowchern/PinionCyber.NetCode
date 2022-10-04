@@ -7,9 +7,9 @@ namespace PinionCyber.NetCode.Samples.Echo
 {
     public class EchoServer : MonoBehaviour
     {
-        public EchoEntry _Entry;
-        public TMPro.TMP_InputField Port;
-        public TMPro.TMP_Text _Message;
+        public EchoEntry Entry;
+        public UnityEngine.UI.InputField Port;
+        public UnityEngine.UI.Text _Message;
         TcpListenSet _Set;
         public void Listen()
         {
@@ -21,7 +21,7 @@ namespace PinionCyber.NetCode.Samples.Echo
                 _Message.text = "";
             }
             var protocol = Protocols.ProtocolCreator.Create();
-            _Set = Regulus.Remote.Server.Provider.CreateTcpService(_Entry, protocol);
+            _Set = Regulus.Remote.Server.Provider.CreateTcpService(Entry, protocol);
             _Set.Listener.Bind(int.Parse(Port.text));
             _Message.text = "Ok";
         }
