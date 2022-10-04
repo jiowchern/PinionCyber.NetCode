@@ -6,8 +6,8 @@ namespace PinionCyber.NetCode.Samples.Echo
     public class EchoEcho : MonoBehaviour     
     {
         public GameObject Root;
-        public TMPro.TMP_InputField Request;
-        public TMPro.TMP_Text Response;
+        public UnityEngine.UI.InputField Request;        
+        public UnityEngine.UI.Text Response;
         IEchoable _Echo;
         public void Show(IEchoable echo)
         {

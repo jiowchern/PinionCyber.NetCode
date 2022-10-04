@@ -6,9 +6,9 @@ namespace PinionCyber.NetCode.Samples.Echo
 {
     public class EchoClient : MonoBehaviour
     {
-        public TMPro.TMP_InputField Port;
-        public TMPro.TMP_InputField Address;
-        public TMPro.TMP_Text Message;
+        public UnityEngine.UI.InputField Port;
+        public UnityEngine.UI.InputField Address;
+        public UnityEngine.UI.Text Message;
 
         public EchoEcho EchoEcho;
         private TcpConnectSet _Set;
