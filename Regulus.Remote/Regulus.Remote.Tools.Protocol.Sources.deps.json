@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Regulus.Remote.Tools.Protocol.Sources/0.0.1.0": {
+      "Regulus.Remote.Tools.Protocol.Sources/0.0.0.15": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.3.2",
           "Microsoft.CodeAnalysis.CSharp": "3.8.0",
@@ -218,7 +218,7 @@
     }
   },
   "libraries": {
-    "Regulus.Remote.Tools.Protocol.Sources/0.0.1.0": {
+    "Regulus.Remote.Tools.Protocol.Sources/0.0.0.15": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
