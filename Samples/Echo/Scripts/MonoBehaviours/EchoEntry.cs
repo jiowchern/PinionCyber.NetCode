@@ -4,13 +4,27 @@ using UnityEngine;
 namespace PinionCyber.NetCode.Samples.Echo
 {
 
-    public class EchoEntry : MonoBehaviour ,  Regulus.Remote.IEntry
+    public class EchoEntry : PinionCyber.NetCode.EntryGetter,  Regulus.Remote.IEntry
     {
         readonly System.Collections.Generic.List<User> _Users;
+
+        public UnityEngine.UI.Text Message;
         public EchoEntry()
         {
             _Users = new System.Collections.Generic.List<User>();
         }
+
+
+        public void Ready()
+        {
+            Message.text = "ready";
+        }
+        public override IEntry GetEntry()
+        {
+            
+            return this;
+        }
+
         void Regulus.Remote.IBinderProvider.AssignBinder(Regulus.Remote.IBinder binder)
         {
             binder.BreakEvent += () => {
@@ -33,7 +47,9 @@ namespace PinionCyber.NetCode.Samples.Echo
             };
             lock(_Users)
             {
-                _Users.Add(new User(binder));                
+                
+                _Users.Add(new User(binder));
+                Message.text = $"users:{_Users.Count}";
             }
                 
         }

@@ -10,7 +10,7 @@
       "Regulus.Serialization/0.1.11.12": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "Regulus.Utility": "0.1.11.12"
+          "Regulus.Utility": "0.1.11.13"
         },
         "runtime": {
           "Regulus.Serialization.dll": {}
@@ -22,7 +22,7 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
-      "Regulus.Utility/0.1.11.12": {
+      "Regulus.Utility/0.1.11.13": {
         "runtime": {
           "Regulus.Utility.dll": {}
         }
@@ -49,7 +49,7 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "Regulus.Utility/0.1.11.12": {
+    "Regulus.Utility/0.1.11.13": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

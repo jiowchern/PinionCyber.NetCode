@@ -11,7 +11,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Regulus.Network": "0.1.11.12",
-          "Regulus.Remote": "0.1.12"
+          "Regulus.Remote": "0.1.11.13"
         },
         "runtime": {
           "Regulus.Remote.Ghost.dll": {}
@@ -25,17 +25,17 @@
       },
       "Regulus.Network/0.1.11.12": {
         "dependencies": {
-          "Regulus.Utility": "0.1.11.12"
+          "Regulus.Utility": "0.1.11.13"
         },
         "runtime": {
           "Regulus.Network.dll": {}
         }
       },
-      "Regulus.Remote/0.1.12": {
+      "Regulus.Remote/0.1.11.13": {
         "dependencies": {
           "Regulus.Network": "0.1.11.12",
           "Regulus.Serialization": "0.1.11.12",
-          "Regulus.Utility": "0.1.11.12"
+          "Regulus.Utility": "0.1.11.13"
         },
         "runtime": {
           "Regulus.Remote.dll": {}
@@ -43,13 +43,13 @@
       },
       "Regulus.Serialization/0.1.11.12": {
         "dependencies": {
-          "Regulus.Utility": "0.1.11.12"
+          "Regulus.Utility": "0.1.11.13"
         },
         "runtime": {
           "Regulus.Serialization.dll": {}
         }
       },
-      "Regulus.Utility/0.1.11.12": {
+      "Regulus.Utility/0.1.11.13": {
         "runtime": {
           "Regulus.Utility.dll": {}
         }
@@ -81,7 +81,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Regulus.Remote/0.1.12": {
+    "Regulus.Remote/0.1.11.13": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -91,7 +91,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Regulus.Utility/0.1.11.12": {
+    "Regulus.Utility/0.1.11.13": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
