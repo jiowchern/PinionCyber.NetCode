@@ -16,7 +16,7 @@ namespace PinionCyber.NetCode.Samples.Echo
 
         Value<string> Protocols.IEchoable.Echo(string message)
         {
-            return "re:" + message;
+            return "echo:" + message;
         }
 
 
