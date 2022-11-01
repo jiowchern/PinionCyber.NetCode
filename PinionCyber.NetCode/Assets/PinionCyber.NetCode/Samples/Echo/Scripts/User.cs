@@ -1,4 +1,5 @@
-﻿using Regulus.Remote;
+﻿using PinionCyber.NetCode.Samples.Echo.Protocols;
+using Regulus.Remote;
 
 namespace PinionCyber.NetCode.Samples.Echo
 {
@@ -23,6 +24,11 @@ namespace PinionCyber.NetCode.Samples.Echo
         public void Dispose()
         {
             Binder.Unbind(_Soul);
+        }
+
+        int IEchoable.Get()
+        {
+            return 0;
         }
     }
 }

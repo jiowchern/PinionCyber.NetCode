@@ -24,7 +24,7 @@ namespace PinionCyber.NetCode.Samples.Echo
                 _Set.Agent.Dispose();
                 await _Set.Connecter.Disconnect();
                 _Set = null;
-            }
+            } 
             var protocol = Protocols.ProtocolCreator.Create();
             _Set = Regulus.Remote.Client.Provider.CreateTcpAgent(protocol);
             _Set.Agent.QueryNotifier<Protocols.IEchoable>().Supply += _ShowEcho;

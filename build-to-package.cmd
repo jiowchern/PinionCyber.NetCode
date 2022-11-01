@@ -6,4 +6,5 @@ dotnet build -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Regu
 
 
 dotnet build -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Regulus.Remote\  .\Regulus.Remote\Regulus.Remote.Tools.Protocol.Sources\
+dotnet build -c release -o .\PinionCyber.NetCode\Assets\PinionCyber.NetCode\Regulus.Remote\  .\Regulus.Remote\Regulus.Remote.Protocol.Identify\
 
