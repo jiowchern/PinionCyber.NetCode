@@ -8,8 +8,8 @@ namespace PinionCyber.NetCode.Samples.Echo
         public GameObject Root;
         public UnityEngine.UI.InputField Request;        
         public UnityEngine.UI.Text Response;
-        IEchoable _Echo;
-        public void Show(IEchoable echo)
+        Echoable _Echo;
+        public void Show(Echoable echo)
         {
             _Echo= echo;
             Root.SetActive(true);

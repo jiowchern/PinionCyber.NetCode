@@ -1,8 +1,10 @@
-﻿namespace PinionCyber.NetCode
+﻿using System;
+
+namespace PinionCyber.NetCode
 {
     public class TcpListener : ListenerGetter
     {
-        public UnityEngine.UI.Text Port;
+        
 
         public UnityEngine.Events.UnityEvent SuccessEvent;
 
@@ -16,9 +18,9 @@
         {
             return _Listener;
         }
-        public void Bind()
+        public void Bind(int port)
         {
-            _Listener.Bind(int.Parse(Port.text));
+            _Listener.Bind(port);
             SuccessEvent.Invoke();
         }
 

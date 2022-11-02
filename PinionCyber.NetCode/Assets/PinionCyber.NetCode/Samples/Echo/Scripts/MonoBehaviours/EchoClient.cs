@@ -11,45 +11,33 @@ namespace PinionCyber.NetCode.Samples.Echo
         public UnityEngine.UI.Text Message;
 
         public EchoEcho EchoEcho;
-        private TcpConnectSet _Set;
-        readonly System.Collections.Concurrent.ConcurrentQueue<bool> _ConnectResults;
+        public TcpConnecter TcpConnecter;
+        public Agent Agent;
         public EchoClient()
         {
-            _ConnectResults = new System.Collections.Concurrent.ConcurrentQueue<bool>();
+            
+            
         }
-        public async void Connect()
+        public void Connect()
         {
-            if(_Set != null)
-            {
-                _Set.Agent.Dispose();
-                await _Set.Connecter.Disconnect();
-                _Set = null;
-            } 
-            var protocol = Protocols.ProtocolCreator.Create();
-            _Set = Regulus.Remote.Client.Provider.CreateTcpAgent(protocol);
-            _Set.Agent.QueryNotifier<Protocols.IEchoable>().Supply += _ShowEcho;
-            var result = await _Set.Connecter.Connect(new System.Net.IPEndPoint(System.Net.IPAddress.Parse(Address.text) , int.Parse(Port.text)));
-            _ConnectResults.Enqueue(result);
+            TcpConnecter.Connect(new System.Net.IPEndPoint(System.Net.IPAddress.Parse(Address.text), int.Parse(Port.text)));            
         }
 
-        private void _ShowEcho(IEchoable echo)
+        public void Ready(Regulus.Remote.INotifierQueryable notifier)
+        {
+            notifier.QueryNotifier<Echoable>().Supply += _ShowEcho;
+        }
+
+        private void _ShowEcho(Echoable echo)
         {
             EchoEcho.Show(echo);
         }
 
-        public void Update()
-        {
-            bool connectResult;
-            while (_ConnectResults.TryDequeue(out connectResult))
-            {
-                Message.text = connectResult ? "Ok" :"Fail";
-            }
-
-            _Set?.Agent.Update();
-        }
+       
 
         private void Start()
         {
+            
             EchoEcho.Hide();
         }
     }

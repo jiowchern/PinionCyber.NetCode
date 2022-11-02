@@ -9,10 +9,7 @@ namespace PinionCyber.NetCode.Samples.Echo.Protocols
             _Create(ref protocol);
             return protocol;
         }
-
-        /*
-            Create a partial method as follows.
-        */
+        
         [Regulus.Remote.Protocol.Creater]
         static partial void _Create( ref Regulus.Remote.IProtocol protocol);
 

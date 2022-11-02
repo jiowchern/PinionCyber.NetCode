@@ -6,7 +6,8 @@ using UnityEngine;
 namespace PinionCyber.NetCode
 {
 
-    public class PinionCyberService : MonoBehaviour
+   
+    public class Service : MonoBehaviour
     {
 
         

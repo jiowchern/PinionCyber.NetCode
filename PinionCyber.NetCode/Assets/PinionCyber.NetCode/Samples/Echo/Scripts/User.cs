@@ -3,7 +3,7 @@ using Regulus.Remote;
 
 namespace PinionCyber.NetCode.Samples.Echo
 {
-    public class User: Protocols.IEchoable ,System.IDisposable
+    public class User: Protocols.Echoable ,System.IDisposable
     {
         public readonly Regulus.Remote.IBinder Binder;
         private readonly ISoul _Soul;
@@ -12,10 +12,10 @@ namespace PinionCyber.NetCode.Samples.Echo
         public User(Regulus.Remote.IBinder  binder)
         {
             Binder = binder;
-            _Soul = Binder.Bind<Protocols.IEchoable>(this);
+            _Soul = Binder.Bind<Protocols.Echoable>(this);
         }
 
-        Value<string> Protocols.IEchoable.Echo(string message)
+        Value<string> Protocols.Echoable.Echo(string message)
         {
             return "echo:" + message;
         }
@@ -26,9 +26,6 @@ namespace PinionCyber.NetCode.Samples.Echo
             Binder.Unbind(_Soul);
         }
 
-        int IEchoable.Get()
-        {
-            return 0;
-        }
+     
     }
 }
