@@ -28,6 +28,7 @@ namespace PinionCyber.NetCode.Samples.Echo
         void Regulus.Remote.IBinderProvider.AssignBinder(Regulus.Remote.IBinder binder)
         {
             binder.BreakEvent += () => {
+                UnityEngine.Debug.Log("server break");
                 lock(_Users)
                 {
                     var removes = new System.Collections.Generic.List<User>();

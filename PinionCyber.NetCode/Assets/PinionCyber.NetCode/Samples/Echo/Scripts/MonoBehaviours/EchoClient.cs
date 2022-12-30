@@ -11,18 +11,26 @@ namespace PinionCyber.NetCode.Samples.Echo
         public UnityEngine.UI.Text Message;
 
         public EchoEcho EchoEcho;
-        public TcpConnecter TcpConnecter;
-        public Agent Agent;
+        public TcpAgent TcpAgent;
         public EchoClient()
         {
             
             
         }
+
         public void Connect()
         {
-            TcpConnecter.Connect(new System.Net.IPEndPoint(System.Net.IPAddress.Parse(Address.text), int.Parse(Port.text)));            
+            var address = System.Net.IPAddress.Parse(Address.text);            
+            TcpAgent.Connect(new System.Net.IPEndPoint(address , int.Parse(Port.text)));
         }
 
+        public void Disconnect()
+        {
+            EchoEcho.Hide();
+
+            TcpAgent.Disconnect();
+        }
+        
         public void Ready(Regulus.Remote.INotifierQueryable notifier)
         {
             notifier.QueryNotifier<Echoable>().Supply += _ShowEcho;

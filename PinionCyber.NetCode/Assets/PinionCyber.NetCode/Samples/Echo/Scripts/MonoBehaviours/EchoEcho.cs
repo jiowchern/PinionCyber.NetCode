@@ -22,7 +22,7 @@ namespace PinionCyber.NetCode.Samples.Echo
             Response.text = response;
         }
 
-        internal void Hide()
+        public void Hide()
         {
             Root.SetActive(false);
         }
