@@ -44,7 +44,9 @@ namespace PinionCyber.NetCode.Samples.Echo
                     {
                         _Users.Remove(user);                        
                     }
+                    Message.text = $"users:{_Users.Count}";
                 }
+
             };
             lock(_Users)
             {
